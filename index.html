@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Хлебомолы</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Хлебомолы</h1>
+
+    <div class="header-container">
+
+      <div class="header-container-upper-row">
+
+        <ul class="header-section-list one-list">
+          <li class="header-section-list-item-one"><a href="">О магазине</a></li>
+          <li class="header-section-list-item-one"><a href="">Доставка и самовывоз</a></li>
+          <li class="header-section-list-item-one"><a href="">Оплата</a></li>
+          <li class="header-section-list-item-one"><a href="">Контакты</a></li>
+          <li class="header-section-list-item-one"><a href="">Блог</a></li>
+        </ul>
+
+        <ul class="header-section-list two-list">
+          <li class="header-section-list-item-two city-name">Город: Москва</li>
+          <li class="header-section-list-item-two profile"><a href="">Личный кабинет</a></li>
+        </ul>
+
+      </div>
+
+      <div class="header-container-middle-row">
+
+        <div class="logo"></div>
+
+        <div class="logo-name">
+          <span class="logo-name-description">Технологии правильного питания</span>
+        </div>
+
+        <form class="header-form" action="index.html" method="get">
+          <input class="header-form-input" type="text" placeholder="Найти что-нибудь" aria-label="Поиск по сайту">
+        </form>
+
+        <div class="phone">
+          <a class="phone-number" href="tel:78005553386">+7 800 555-33-86</a>
+          <a class="phone-callback" href="">Обратный звонок</a>
+        </div>
+
+      </div>
+
+      <nav class="header-container-bottom-row main-navigation">
+        <ul class="main-menu">
+          <li class="main-menu-list"><a class="main-menu-link" href="">Мельницы</a></li>
+          <li class="main-menu-list"><a class="main-menu-link" href="">Техника</a></li>
+          <li class="main-menu-list"><a class="main-menu-link" href="">Для выпечки</a></li>
+          <li class="main-menu-list"><a class="main-menu-link" href="">Посуда</a></li>
+          <li class="main-menu-list"><a class="main-menu-link" href="">Проращиватели</a></li>
+          <li class="main-menu-list"><a class="main-menu-link" href="">Детям</a></li>
+          <li class="main-menu-list"><a class="main-menu-link" href="">Чай из Непала</a></li>
+        </ul>
+        <a class="cart" href="" aria-label="Корзина" data-count="2">13 990 &#8381;</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <section class="section-order">
+
+      <div class="section-order-column-left">
+
+        <h2 class="section-order-title">Оформление заказа</h2>
+
+        <div class="user-status-container">
+          <a class="private-person" href=""><span>Физическое лицо</span></a>
+          <a class="legal-person current-person" href=""><span>Юридическое лицо</span></a>
+        </div>
+
+        <form class="order-form" action="index.html" method="post">
+
+          <div class="order-form-contact-info">
+
+            <span class="title-form">Контактные данные</span>
+
+            <div class="contact-info-item">
+              <label class="order-form-label" for="name">Имя</label>
+              <input class="order-form-input" type="text" id="name" placeholder="Александр">
+            </div>
+
+            <div class="contact-info-item">
+              <label class="order-form-label" for="family-name">Фамилия</label>
+              <input class="order-form-input" type="text" id="family-name" placeholder="Пушкин">
+            </div>
+
+            <div class="contact-info-item">
+              <label class="order-form-label" for="email">Эл.почта</label>
+              <input class="order-form-input" type="text" id="email" placeholder="email" pattern="[A-Za-z@0-9\.]*">
+            </div>
+
+            <div class="contact-info-item">
+              <label class="order-form-label" for="phone-number">Номер телефона</label>
+
+              <div class="contact-info-item-phone-container">
+                <input class="order-form-input input-first-phone-number" type="text" placeholder="+7"
+                  role="presentation" readonly>
+                <input class="order-form-input input-phone-number" type="text" id="phone-number"
+                  placeholder="999 432 34-21">
+              </div>
+
+            </div>
+
+            <div class="error-message">Недопустимые символы. Это поле может содержать только латиницу.</div>
+
+          </div>
+
+          <div class="order-form-adress">
+
+            <span class="order-form-adress-title title-form">Адрес и способ доставки</span>
+
+            <div class="order-form-adress-country-city">
+
+              <div class="order-form-adress-item">
+                <label class="order-form-label" for="country">Страна</label>
+                <select class="order-form-input" name="country" id="country">
+                  <option value="Россия">Россия</option>
+                  <option value="Германия">Германия</option>
+                  <option value="Франция">Франция</option>
+                  <option value="Англия">Англия</option>
+                </select>
+              </div>
+
+              <div class="order-form-adress-item">
+                <label class="order-form-label" for="city">Город</label>
+                <input class="order-form-input" type="text" id="city" value="Москва">
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="section-order-column-right"></div>
+
+    </section>
+
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
