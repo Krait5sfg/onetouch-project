@@ -61,7 +61,8 @@
           <li class="main-menu-list"><a class="main-menu-link" href="">Детям</a></li>
           <li class="main-menu-list"><a class="main-menu-link" href="">Чай из Непала</a></li>
         </ul>
-        <a class="cart" href="" aria-label="Корзина" data-count="2">13 990 &#8381;</a>
+        <a class="cart" href="" aria-label="Корзина" data-count="2"><span class="cart-price" data-price="13990"></span>
+          &#160;&#8381;</a>
       </nav>
 
     </div>
@@ -148,28 +149,29 @@
             <span class="order-form-delivery-title title-form">Способ доставки</span>
 
             <ul class="delivery-list">
-              <li class="delivery-list-item">
+              <li class="delivery-list-item" data-delivery="Доставка курьерской службой" data-price="710">
                 <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="courier"
                   value="courier">
                 <label class="delivery-list-label" for="courier">
-                  <span class="delivery-list-label-first">Доставка курьерской службой — 710</span>
+                  <span class="delivery-list-label-first">Доставка курьерской службой — 710 &#8381;</span>
                   <span class="delivery-list-label-second">(Срок доставки — 1–3 дня)</span>
                 </label>
               </li>
-              <li class="delivery-list-item">
+              <li class="delivery-list-item" data-delivery="Доставка транспортной компанией" data-price="210">
                 <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="company"
                   value="company">
                 <label class="delivery-list-label" for="company">
-                  <span class="delivery-list-label-first">Доставка транспортной компанией — 210</span>
+                  <span class="delivery-list-label-first">Доставка транспортной компанией — 210 &#8381;</span>
                   <span class="delivery-list-label-second">(Данный вид доставки возможен при полной
                     предоплате заказа. Срок доставки — 3–5 дней)
                   </span>
                 </label>
               </li>
-              <li class="delivery-list-item delivery-list-item-current">
-                <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="self" value="self">
+              <li class="delivery-list-item delivery-list-item-current" data-delivery="Самовывоз" data-price="180">
+                <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="self" value="self"
+                  checked>
                 <label class="delivery-list-label" for="self">
-                  <span class="delivery-list-label-first">Самовывоз — 180</span>
+                  <span class="delivery-list-label-first">Самовывоз — 180 &#8381;</span>
                   <span class="delivery-list-label-second">Доставка до пункта самовывоза займет 2–3 дня</span>
                 </label>
               </li>
@@ -177,7 +179,7 @@
 
           </div>
 
-          <div class="order-form-self-delivery-point">
+          <div class="order-form-self-delivery-point vissual">
 
             <span class="order-form-self-delivery-point-title title-form">Пункт самовывоза</span>
 
@@ -192,13 +194,9 @@
               <option value="Кузнецкий мост">Кузнецкий мост</option>
             </select>
 
-            <div class="order-form-delivery-point-map">
-              <div class="order-form-delivery-point-map-wraper">
-                <span class="order-form-delivery-point-map-adress">
-                  Ул. Кузнецкий мост, 9/10 стр.2, офис 204
-                  Ежедневно с 12:00 до 22:00
-                </span>
-              </div>
+            <div class="order-form-delivery-point-map" id="map">
+              <div class="order-form-delivery-point-map-adress"
+                data-adress="Ул. Кузнецкий мост, 9/10 стр.2, офис 204 Ежедневно с 12:00 до 22:00"></div>
             </div>
 
           </div>
@@ -228,34 +226,34 @@
           <tr>
             <td class="user-order-list first-row">Мельница ручная Kornkraft
               Mia aMola</td>
-            <td class="user-order-list-price first-row">18 990</td>
+            <td class="user-order-list-price first-row">18 990 &#8381;</td>
           </tr>
           <tr>
             <td class="user-order-list second-row">Пшеница БИО, 1 кг (Россия)
               (2 шт)</td>
-            <td class="user-order-list-price second-row">420</td>
+            <td class="user-order-list-price second-row">420 &#8381;</td>
           </tr>
         </table>
 
         <table class="user-order second-table">
           <tr>
             <td class="user-order-list third-row">Размер скидки (5%)</td>
-            <td class="user-order-list-price third-row">420</td>
+            <td class="user-order-list-price third-row">420 &#8381;</td>
           </tr>
           <tr>
             <td class="user-order-list fouth-row">Итого</td>
-            <td class="user-order-list-price fouth-row">18 344</td>
+            <td class="user-order-list-price fouth-row">18 344 &#8381;</td>
           </tr>
           <tr>
             <td class="user-order-list fifth-row">Самовывоз</td>
-            <td class="user-order-list-price fifth-row">390</td>
+            <td class="user-order-list-price fifth-row">000</td>
           </tr>
         </table>
 
         <table class="user-order third-table">
           <tr>
             <td class="user-order-list sixth-row">Сумма с доставкой</td>
-            <td class="user-order-list-price sixth-row">18 734</td>
+            <td class="user-order-list-price sixth-row">18 734 &#8381;</td>
           </tr>
         </table>
 
@@ -264,6 +262,10 @@
     </section>
 
   </main>
+  <!-- Яндекс карта -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c44859d8-d87b-4b60-aa9e-429e15f7d631"
+    type="text/javascript"></script>
+  <script src="js/map.js"></script>
   <script src="js/script.js"></script>
 </body>
 

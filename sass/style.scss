@@ -19,10 +19,6 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
   overflow: hidden;
 }
 
-.hidden {
-  display: none;
-}
-
 .header {
   width: 100%;
   min-height: 365px;
@@ -546,11 +542,30 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
 
   .delivery-list-item-current {
     outline: 1px solid #f0e4ca;
+    background-color: #FDFCFA;
   }
 
   .delivery-list-label {
+    position: relative;
+
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+  }
+
+  .delivery-list-label::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -27px;
+
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/delivery-list-empty-icon.png");
+  }
+
+  .delivery-list-input:checked + label::before {
+    background-image: url("../img/delivey-list-icon.png");
   }
 
   .delivery-list-label-first {
@@ -568,7 +583,7 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
   }
 
   .order-form-self-delivery-point {
-    display: flex;
+    // display: flex; //это свойство в классе vissual
     flex-direction: column;
     margin-top: 18px;
   }
@@ -584,27 +599,52 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
   }
 
   .order-form-delivery-point-map {
+    position: relative;
     width: 390px;
     height: 292px;
     margin-top: 20px;
     
-    background-color: lightgrey;
-    outline: 1px solid #f0e4ca;
+    background-image: url("../img/map.png");
+    background-color: #F5E5CA;
+    border: 1px solid #f0e4ca;
+    -webkit-box-shadow: 0px 25px 19px -20px rgba(245,229,202,1);
+    -moz-box-shadow: 0px 25px 19px -20px rgba(245,229,202,1);
+    box-shadow: 0px 25px 19px -20px rgba(245,229,202,1);
+
+    overflow: hidden;
   }
 
-  .order-form-delivery-point-map-wraper {
-    display: flex;
-    align-items: flex-end;
-    width: 390px;
-    height: 292px;
-    
-    background-image: linear-gradient(to top, #ffffff 25%, transparent 75%);
+  .order-form-delivery-point-map::before {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 34%;
+    width: 36px;
+    height: 45px;
+
+    background-image: url("../img/delivery-point-icon.png");
   }
 
   .order-form-delivery-point-map-adress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 84px;
+
+    background-image: linear-gradient(to top, #FDFCFA 65%, transparent);
+  }
+
+  .order-form-delivery-point-map-adress::after {
+    content: attr(data-adress);
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+
     width: 280px;
-    margin-left: 30px;
-    margin-bottom: 24px;
+    height: auto;
 
     font-family: $calibri;
     font-size: 16px;
@@ -685,7 +725,8 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
 
  .user-order-list-price {
     width: 70px;
-    
+
+    vertical-align: top;
     text-align: right;
     color: #461f02;
   }
@@ -712,11 +753,17 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
   .user-order.second-table {
     border-left: 1px solid #f0e4ca;
     border-right: 1px solid #f0e4ca;
+    background-color: #FDFCFA;
   }
   
   .user-order.third-table {
     border: 1px solid #f0e4ca;
     border-top: 1px dashed #f0e4ca;
+    background-color: #FDFAF5;
+
+    -webkit-box-shadow: 0px 25px 19px -20px rgba(245,229,202,1);
+    -moz-box-shadow: 0px 25px 19px -20px rgba(245,229,202,1);
+    box-shadow: 0px 25px 19px -20px rgba(245,229,202,1);
   }
 
   .user-order-list.first-row {
@@ -750,6 +797,14 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
 
 }
 
+/*------------*/
+.hidden {
+  display: none;
+}
+
+.vissual {
+  display: flex;
+}
 
 // @media only screen and (min-width : 1920px) {
 //   .header {
