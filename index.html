@@ -143,11 +143,123 @@
 
           </div>
 
+          <div class="order-form-delivery">
+
+            <span class="order-form-delivery-title title-form">Способ доставки</span>
+
+            <ul class="delivery-list">
+              <li class="delivery-list-item">
+                <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="courier"
+                  value="courier">
+                <label class="delivery-list-label" for="courier">
+                  <span class="delivery-list-label-first">Доставка курьерской службой — 710</span>
+                  <span class="delivery-list-label-second">(Срок доставки — 1–3 дня)</span>
+                </label>
+              </li>
+              <li class="delivery-list-item">
+                <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="company"
+                  value="company">
+                <label class="delivery-list-label" for="company">
+                  <span class="delivery-list-label-first">Доставка транспортной компанией — 210</span>
+                  <span class="delivery-list-label-second">(Данный вид доставки возможен при полной
+                    предоплате заказа. Срок доставки — 3–5 дней)
+                  </span>
+                </label>
+              </li>
+              <li class="delivery-list-item delivery-list-item-current">
+                <input class="delivery-list-input visually-hidden" type="radio" name="delivery" id="self" value="self">
+                <label class="delivery-list-label" for="self">
+                  <span class="delivery-list-label-first">Самовывоз — 180</span>
+                  <span class="delivery-list-label-second">Доставка до пункта самовывоза займет 2–3 дня</span>
+                </label>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="order-form-self-delivery-point">
+
+            <span class="order-form-self-delivery-point-title title-form">Пункт самовывоза</span>
+
+            <label class="order-form-label" for="self-delivery-point">Станция метро</label>
+            <select class="order-form-input self-delivery-point-select" name="self-delivery-point"
+              id="self-delivery-point">
+              <option value="Кузнецкий мост">Кузнецкий мост</option>
+              <option value="Кузнецкий мост">Кузнецкий мост</option>
+              <option value="Кузнецкий мост">Кузнецкий мост</option>
+              <option value="Кузнецкий мост">Кузнецкий мост</option>
+              <option value="Кузнецкий мост">Кузнецкий мост</option>
+              <option value="Кузнецкий мост">Кузнецкий мост</option>
+            </select>
+
+            <div class="order-form-delivery-point-map">
+              <div class="order-form-delivery-point-map-wraper">
+                <span class="order-form-delivery-point-map-adress">
+                  Ул. Кузнецкий мост, 9/10 стр.2, офис 204
+                  Ежедневно с 12:00 до 22:00
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="order-form-comment">
+
+            <span class="order-form-comment-title title-form">Комментарий к заказу</span>
+
+            <textarea class="order-form-comment-textarea" name="comment" id=""
+              aria-label="Поле для комментария к заказу"></textarea>
+
+          </div>
+
+          <button class="form-button" type="submit">К выбору способа оплаты</button>
+
         </form>
 
       </div>
 
-      <div class="section-order-column-right"></div>
+      <div class="section-order-column-right">
+
+        <table class="user-order first-table">
+          <tr>
+            <td class="user-order-title">Ваш заказ</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="user-order-list first-row">Мельница ручная Kornkraft
+              Mia aMola</td>
+            <td class="user-order-list-price first-row">18 990</td>
+          </tr>
+          <tr>
+            <td class="user-order-list second-row">Пшеница БИО, 1 кг (Россия)
+              (2 шт)</td>
+            <td class="user-order-list-price second-row">420</td>
+          </tr>
+        </table>
+
+        <table class="user-order second-table">
+          <tr>
+            <td class="user-order-list third-row">Размер скидки (5%)</td>
+            <td class="user-order-list-price third-row">420</td>
+          </tr>
+          <tr>
+            <td class="user-order-list fouth-row">Итого</td>
+            <td class="user-order-list-price fouth-row">18 344</td>
+          </tr>
+          <tr>
+            <td class="user-order-list fifth-row">Самовывоз</td>
+            <td class="user-order-list-price fifth-row">390</td>
+          </tr>
+        </table>
+
+        <table class="user-order third-table">
+          <tr>
+            <td class="user-order-list sixth-row">Сумма с доставкой</td>
+            <td class="user-order-list-price sixth-row">18 734</td>
+          </tr>
+        </table>
+
+      </div>
 
     </section>
 
