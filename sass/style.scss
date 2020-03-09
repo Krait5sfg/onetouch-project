@@ -317,6 +317,7 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
 .main {
   background-image: url("../img/main-background-top.png");
   background-repeat: no-repeat;
+  max-height: 1468px;
 }
 
 .section-order {
@@ -809,6 +810,247 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
     max-width: 1030px;
     height: auto;
     margin: 0 auto;
+    padding: 35px 32px 0 32px;
+
+  }
+
+  .footer-title {
+    font-family: $georgia;
+    font-size: 17px;
+    color: #461f02;
+  }
+
+  .footer-list {
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+
+    list-style: none;
+  }
+
+  .footer-list-link,
+  .footer-invintation-description {
+    margin: 0;
+    padding: 0;
+
+    font-family: $calibri;
+    font-size: 14px;
+    color: #766259;
+    line-height: 22px;
+
+    text-decoration: none;
+  }
+
+  .underscored-link {
+    position: relative;
+  }
+
+  .underscored-link::after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #766259;
+    opacity: 0.3;
+  }
+
+  .footer-invintation-description {
+    margin-top: 4px;
+
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .footer-upper-row {
+    display: flex;
+  }
+
+  .footer-catalog {
+    margin-right: 49px;
+  }
+
+  .footer-list.catalog {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-height: 91px;
+    width: 195px;
+  }
+
+  .footer-info {
+    margin-right: 94px;
+  }
+
+  .footer-list.info {
+    width: 158px;
+  }
+
+  .footer-contacts {
+    margin-right: 26px;
+  }
+
+  .footer-list {
+    width: 225px;
+  }
+
+  .footer-form {
+    display: flex;
+    margin-top: 13px;
+  }
+
+  .footer-form-input {
+    padding-left: 13px;
+    width: 185px;
+    height: 40px;
+
+    font-family: $calibri;
+    font-size: 15px;
+    color: #766259;
+
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: 1px solid #CFBFB9;
+    border-right-color: #ffffff;
+
+    cursor: pointer;
+  }
+
+  .footer-form-input::placeholder {
+    font-family: $calibri;
+    font-size: 15px;
+    color: #766259;
+  }
+
+  .footer-form-button {
+    position: relative;
+
+    height: 40px;
+    width: 43px;
+    margin-left: -1px;
+
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #FF7000;
+
+    cursor: pointer;
+  }
+
+  .footer-form-button::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+
+    width: 11px;
+    height: 18px;
+
+    transform: translate(-50%, -50%);
+    background-image: url("../img/button-icon.png");
+  }
+
+  .footer-bottom-row {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+  }
+
+  .footer-bottom-row::before {
+    position: absolute;
+    content: "";
+    top: -24px;
+    left: 0;
+
+    width: 100%;
+    height: 9px;
+
+    background-image: url("../img/footer-inner-border.png");
+  }
+
+  .footer-copyright {
+    margin: 0;
+    padding: 0;
+
+    font-family: $calibri;
+    font-size: 13px;
+    color: #766259;
+  }
+
+  .social-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    min-width: 130px;
+
+    list-style: none;
+  }
+
+  .social-link {
+    position: relative;
+
+    display: block;
+    width: 27px;
+    height: 27px;
+  }
+
+  .youtube-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/youtube-icon.png");
+  }
+
+  .instagram-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/instagram-icon.png");
+  }
+
+  .facebook-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/facebook-icon.png");
+  }
+
+  .vk-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/vk-icon.png");
   }
 
 }
