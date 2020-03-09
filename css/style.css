@@ -649,6 +649,7 @@
 }
 
 .footer {
+  position: relative;
   width: 100%;
   min-height: 301px;
   background-image: url("../img/footer-background.jpg");
@@ -657,10 +658,11 @@
   background-position: top;
 }
 .footer .footer-container {
-  max-width: 1030px;
+  display: flex;
+  flex-direction: column;
+  max-width: 970px;
   height: auto;
   margin: 0 auto;
-  padding: 35px 32px 0 32px;
 }
 .footer .footer-title {
   font-family: "Georgia Italic", "Times New Roman", serif;
@@ -696,6 +698,9 @@
   border-top: 1px solid #766259;
   opacity: 0.3;
 }
+.footer .footer-invintation {
+  width: 230px;
+}
 .footer .footer-invintation-description {
   margin-top: 4px;
   font-size: 13px;
@@ -703,9 +708,11 @@
 }
 .footer .footer-upper-row {
   display: flex;
+  margin-top: 35px;
 }
 .footer .footer-catalog {
   margin-right: 49px;
+  width: 195px;
 }
 .footer .footer-list.catalog {
   display: flex;
@@ -717,15 +724,11 @@
 }
 .footer .footer-info {
   margin-right: 94px;
-}
-.footer .footer-list.info {
   width: 158px;
 }
 .footer .footer-contacts {
   margin-right: 26px;
-}
-.footer .footer-list {
-  width: 225px;
+  min-width: 225px;
 }
 .footer .footer-form {
   display: flex;
@@ -742,7 +745,6 @@
   border-bottom-left-radius: 2px;
   border: 1px solid #CFBFB9;
   border-right-color: #ffffff;
-  cursor: pointer;
 }
 .footer .footer-form-input::placeholder {
   font-family: "Calibri Regular", "Arial", sans-serif;
@@ -770,21 +772,20 @@
   transform: translate(-50%, -50%);
   background-image: url("../img/button-icon.png");
 }
+.footer .footer-decorative-row {
+  width: 100%;
+  height: 9px;
+  margin-top: 47px;
+  background-image: url("../img/footer-inner-border.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 .footer .footer-bottom-row {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 75px;
-}
-.footer .footer-bottom-row::before {
-  position: absolute;
-  content: "";
-  top: -24px;
-  left: 0;
-  width: 100%;
-  height: 9px;
-  background-image: url("../img/footer-inner-border.png");
+  margin-top: 15px;
+  margin-bottom: 18px;
 }
 .footer .footer-copyright {
   margin: 0;
@@ -851,6 +852,26 @@
 
 .vissual {
   display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-upper-row,
+.footer-bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-catalog,
+.footer-info,
+.footer-contacts,
+.footer-invintation {
+    margin: 20px;
+  }
+
+  .footer-bottom-row .footer-copyright,
+.footer-bottom-row .social-list {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
