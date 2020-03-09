@@ -797,6 +797,22 @@ $calibriItalic: "Calibri Italic", "Arial", sans-serif;
 
 }
 
+.footer {
+  width: 100%;
+  min-height: 301px;
+  background-image: url("../img/footer-background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  .footer-container {
+    max-width: 1030px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+}
+
 /*------------*/
 .hidden {
   display: none;
